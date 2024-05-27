@@ -1,7 +1,7 @@
 {
-  "name": "data-structures",
+  "name": "hash-table",
   "version": "1.0.0",
-  "description": "A TypeScript project demonstrating the implementation of fundamental data structures (stack, queue, binary tree, graph, linked list) and algorithms for solving specific problems.",
+  "description": "A custom implementation of a hash table in TypeScript with a unique hash function and collision resolution strategies.",
   "main": "index.js",
   "type": "module",
   "scripts": {

@@ -1,6 +1,7 @@
-# Data Structures
+# Hash Functions and Hash Tables
 
-This project demonstrates the implementation of various fundamental data structures and algorithms using TypeScript. The primary goal is to showcase understanding and practical application of stacks, queues, binary trees, graphs, and linked lists. Additionally, it includes solving specific algorithmic problems related to these data structures.
+This repository contains an implementation of a hash table in TypeScript with a custom hash function. The project demonstrates the concepts of hash functions, collision resolution, and practical application of hash tables.
+
 ## Getting Started
 
 ### Prerequisites
