@@ -1,4 +1,4 @@
-import CustomHashTable  from './../src/CustomHashTable';
+import CustomHashTable from './../src/CustomHashTable';
 
 /**
  * Test suite for the CustomHashTable class.
@@ -29,11 +29,17 @@ describe('CustomHashTable', () => {
 
   // Test handling collisions using linear probing
   test('should handle collisions correctly with linear probing', () => {
-    const key1 = 'key1';
-    const key2 = 'key2'; // This should cause a collision
+    const key1 = 'xyz';
+    const key2 = 'zyx'; // This should cause a collision
 
     hashTable.insert(key1, 100);
     hashTable.insert(key2, 200);
+
+    // Calculate the hash values for both keys to ensure they collide
+    const hashIndex1 = hashTable.hash(key1);
+    const hashIndex2 = hashTable.hash(key2);
+
+    expect(hashIndex1).toBe(hashIndex2);
 
     expect(hashTable.get(key1)).toBe(100);
     expect(hashTable.get(key2)).toBe(200);
@@ -82,8 +88,8 @@ describe('CustomHashTable', () => {
 
     hashTable.display();
 
+    // These values are based on the assumption that keys 'key1' and 'key2' have specific indices.
     expect(console.log).toHaveBeenCalledWith('index = 18, key = key1, value = 100');
     expect(console.log).toHaveBeenCalledWith('index = 19, key = key2, value = 200');
   });
 });
-
